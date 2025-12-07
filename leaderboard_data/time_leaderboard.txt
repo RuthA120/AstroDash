@@ -1,0 +1,7 @@
+Time
+Player3,83
+Ruth,108
+Player1,112
+Player2,116
+ruth,114
+Player4,143
