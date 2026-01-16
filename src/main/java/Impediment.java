@@ -1,3 +1,5 @@
+package main.java;
+
 public class Impediment {
     /*Attributes*/
     private int xLocation;
@@ -62,7 +64,7 @@ public class Impediment {
 
     /*Testing Methods*/
     public String toString(){
-        return "Impediment: " + xLocation + ", " + yLocation + "\n";
+        return "main.java.Impediment: " + xLocation + ", " + yLocation + "\n";
     }
 
 }

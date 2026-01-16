@@ -1,3 +1,4 @@
+package main.java;
 import processing.core.*;
 import processing.sound.SoundFile;
 
@@ -27,7 +28,7 @@ public class FireBall {
     }
 
     public void loadMedia(PApplet p){
-        fireBallImage = p.loadImage(AstroDashUI.fileFolder + "FireBall.png");
+        fireBallImage = p.loadImage("FireBall.png");
         fireBallImage.resize(20, 20);
     }
 
@@ -38,7 +39,7 @@ public class FireBall {
         }
 
         if (fireBallImage == null) {
-            fireBallImage = p.loadImage(AstroDashUI.fileFolder + "FireBall.png");
+            fireBallImage = p.loadImage("FireBall.png");
             fireBallImage.resize(20,20);
         }
 

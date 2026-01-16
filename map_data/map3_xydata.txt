@@ -58,5 +58,5 @@ Coins
 750,105
 5,325
 795,325
-Checkpoint
+main.java.Checkpoint
 780,65,30,30

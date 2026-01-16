@@ -1,3 +1,4 @@
+package main.java;
 import processing.core.*;
 
 public class AstroDashUI extends PApplet{
@@ -14,7 +15,7 @@ public class AstroDashUI extends PApplet{
     public void setup()
     {
         loadMedia();
-        myFont = createFont(fileFolder + "ByteBounce.ttf", 42);
+        myFont = createFont("ByteBounce.ttf", 42);
     }
 
     public void loadMedia(){
@@ -23,8 +24,8 @@ public class AstroDashUI extends PApplet{
 
     public void draw()
     {
-       background(255);
-       theGame.draw(this, myFont);
+        background(255);
+        theGame.draw(this, myFont);
     }
 
     public void keyPressed(){
@@ -42,7 +43,7 @@ public class AstroDashUI extends PApplet{
 
 
     public static void main(String[] args){
-        PApplet.main("AstroDashUI");
+        PApplet.main("main.java.AstroDashUI");
     }
 
 

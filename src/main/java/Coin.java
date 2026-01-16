@@ -1,3 +1,4 @@
+package main.java;
 import processing.core.*;
 
 public class Coin {
@@ -54,9 +55,8 @@ public class Coin {
     }
 
     /*Game Functions*/
-
     public void loadMedia(PApplet p){
-        coinImage = p.loadImage(AstroDashUI.fileFolder + "PixelCoin.png");
+        coinImage = p.loadImage("PixelCoin.png");
         coinImage.resize(30, 30);
     }
 

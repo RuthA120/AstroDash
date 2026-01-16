@@ -1,3 +1,5 @@
+package main.java;
+
 import processing.core.*;
 
 import java.util.ArrayList;
@@ -202,7 +204,7 @@ public class Map {
         return checkpoint;
     }
 
-    /*Game Functions*/
+    /*main.java.Game Functions*/
     public void addCheckpoint(int xLocation, int yLocation, int width, int height){
         checkpoint.setxLocation(xLocation);
         checkpoint.setyLocation(yLocation);
@@ -272,7 +274,7 @@ public class Map {
     /*Testing Methods*/
     public String toString()
     {
-        String str = "Map " + mapNumber + "\n";
+        String str = "main.java.Map " + mapNumber + "\n";
 
         str += "Number of enemies: " + enemies.size() + "\n";
         for(Enemy e : enemies){

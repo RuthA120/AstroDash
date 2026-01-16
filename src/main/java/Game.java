@@ -1,9 +1,12 @@
+package main.java;
+
 import java.util.ArrayList;
 import processing.core.*;
+import processing.sound.SoundFile;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import processing.sound.*;
+
 
 public class Game {
     /*Attributes*/
@@ -90,13 +93,13 @@ public class Game {
         leaderBoardImages.clear();
 
         for(int i=0; i<maps.size(); i++){
-            PImage image = p.loadImage(AstroDashUI.fileFolder + "gamebackground" + (i+1) + ".png");
+            PImage image = p.loadImage("gamebackground" + (i+1) + ".png");
             image.resize(p.width, p.height);
             mapImages.add(image);
         }
 
         for(int i=0; i<6; i++){
-            PImage image = p.loadImage(AstroDashUI.fileFolder + "StartPage" + (i+1) + ".png");
+            PImage image = p.loadImage("StartPage" + (i+1) + ".png");
             image.resize(p.width, p.height);
             screenImages.add(image);
         }
@@ -105,33 +108,34 @@ public class Game {
             maps.get(i).loadMedia(p);
         }
 
-        heartImage = p.loadImage(AstroDashUI.fileFolder + "Heart.png");
+        heartImage = p.loadImage("Heart.png");
         heartImage.resize(60, 60);
 
         for(int i=0; i<4; i++){
-            PImage image = p.loadImage(AstroDashUI.fileFolder + "Health" + i + ".png");
+            PImage image = p.loadImage("Health" + i + ".png");
             image.resize(300, 36);
             healthImages.add(image);
         }
 
         for(int i=0; i<2; i++){
-            PImage image = p.loadImage(AstroDashUI.fileFolder + "EndGame" + (i+1) + ".png");
+            PImage image = p.loadImage("EndGame" + (i+1) + ".png");
             image.resize(p.width, p.height);
             endGameImages.add(image);
         }
 
         for(int i=0; i<2; i++){
-            PImage image = p.loadImage(AstroDashUI.fileFolder + "Leaderboard" + (i+1) + ".png");
+            PImage image = p.loadImage("Leaderboard" + (i+1) + ".png");
             image.resize(p.width, p.height);
             leaderBoardImages.add(image);
         }
 
         player.loadMedia(p);
-        soundGameWon = new SoundFile(p,AstroDashUI.fileFolder + "Game-Win.mp3");
-        soundGameLost = new SoundFile(p,AstroDashUI.fileFolder + "Game-Over.mp3");
-        gameMusic = new SoundFile(p,AstroDashUI.fileFolder + "Space-Music.mp3");
-        checkPointSound = new SoundFile(p, AstroDashUI.fileFolder + "Checkpoint-Sound.mp3");
+        soundGameWon = new SoundFile(p,"Game-Win.mp3");
+        soundGameLost = new SoundFile(p,"Game-Over.mp3");
+        gameMusic = new SoundFile(p,"Space-Music.mp3");
+        checkPointSound = new SoundFile(p, "Checkpoint-Sound.mp3");
     }
+
 
     public void draw(PApplet p, PFont myFont)
     {
@@ -498,7 +502,7 @@ public class Game {
     }
 
 
-    /*Game Functions*/
+    /*main.java.Game Functions*/
     public void updateCurrentMap(){
         if (player.checkCheckPointCollision(maps.get(currentMap - 1).getCheckpoint())) {
             currentMap++;
@@ -557,7 +561,7 @@ public class Game {
                     case "Enemies":
                     case "Coins":
                     case "Lava Pits":
-                    case "Checkpoint":
+                    case "main.java.Checkpoint":
                         section = line;
                         continue;
                 }
@@ -614,7 +618,7 @@ public class Game {
                             );
                             break;
 
-                        case "Checkpoint":
+                        case "main.java.Checkpoint":
                             if (parts.length != 4) {
                                 System.out.println("Invalid checkpoint line: " + line);
                                 continue;
@@ -644,9 +648,9 @@ public class Game {
 
     /*Testing Methods*/
     public String toString(){
-        String s = "Game: \n";
+        String s = "main.java.Game: \n";
         s += "Total Maps: " + mapCount + "\n";
-        s += "Current Map: " + currentMap + "\n";
+        s += "Current main.java.Map: " + currentMap + "\n";
         s += timer + "\n";
         s += leaderBoard + "\n";
         s += player + "\n";

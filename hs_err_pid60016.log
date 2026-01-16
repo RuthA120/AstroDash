@@ -16,7 +16,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: -ea -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57402 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 AstroDashUI
+Command Line: -ea -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57402 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 main.java.AstroDashUI
 
 Host: "MacBookAir10,1" arm64, 8 cores, 8G, Darwin 23.4.0, macOS 14.4 (23E214)
 Time: Wed Oct 15 16:29:08 2025 CDT elapsed time: 358.745126 seconds (0d 0h 5m 58s)
@@ -1121,7 +1121,7 @@ JVMTI agents:
 
 VM Arguments:
 jvm_args: -ea -javaagent:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar=57402 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
-java_command: AstroDashUI
+java_command: main.java.AstroDashUI
 java_class_path (initial): /Users/rutha./Documents/IntelliJ-Projects/AstroDash/out/production/AstroDash:/Users/rutha./Documents/IntelliJ-Projects/AstroDash/lib/core.jar
 Launcher Type: SUN_STANDARD
 

@@ -1,3 +1,5 @@
+package main.java;
+
 import processing.core.*;
 
 public class LavaPit extends Impediment{
@@ -27,7 +29,7 @@ public class LavaPit extends Impediment{
     }
 
     public void loadMedia(PApplet p){
-        lavaPitImage = p.loadImage(AstroDashUI.fileFolder + "LavaPit.jpeg");
+        lavaPitImage = p.loadImage("LavaPit.jpeg");
 
     }
 

@@ -1,3 +1,4 @@
+package main.java;
 import processing.core.*;
 
 import java.util.Random;
@@ -72,7 +73,7 @@ public class Enemy extends Impediment{
     }
 
     public void loadMedia(PApplet p){
-        enemyImage = p.loadImage(AstroDashUI.fileFolder + "Enemy.png");
+        enemyImage = p.loadImage("Enemy.png");
         enemyImage.resize(50, 50);
     }
 

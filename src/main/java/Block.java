@@ -1,4 +1,7 @@
-import processing.core.*;
+package main.java;
+
+import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Block {
     private int xLocation;
@@ -23,10 +26,16 @@ public class Block {
         this.blockHeight = 0;
     }
 
-    public void loadMedia(PApplet p){
-        blockImage = p.loadImage(AstroDashUI.fileFolder + "Block.png");
+    public void loadMedia(PApplet p) {
+        try {
+            blockImage = p.loadImage("Block.png"); // just the filename
+            if (blockImage == null) {
+                System.err.println("Failed to load Block.png");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-
     public int getxLocation() { return xLocation; }
     public int getyLocation() { return yLocation; }
     public int getblockWidth() { return blockWidth; }
@@ -39,7 +48,7 @@ public class Block {
 
     public void draw(PApplet p)
     {
-          p.image(blockImage, xLocation, yLocation, blockWidth, blockHeight);
+        p.image(blockImage, xLocation, yLocation, blockWidth, blockHeight);
     }
 
 

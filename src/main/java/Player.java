@@ -1,3 +1,5 @@
+package main.java;
+
 import processing.core.*;
 import processing.sound.*;
 
@@ -53,14 +55,14 @@ public class Player {
     }
 
     public void loadMedia(PApplet p){
-        playerImage = p.loadImage(AstroDashUI.fileFolder + "Avatar.png");
+        playerImage = p.loadImage("Avatar.png");
         playerImage.resize(40, 40);
         if (fireBall != null) {
             fireBall.loadMedia(p);
         }
-        coinSound = new SoundFile(p,AstroDashUI.fileFolder + "Coin-Receive.mp3");
-        enemySound = new SoundFile(p,AstroDashUI.fileFolder + "Enemy-Damage.mp3");
-        lavaSound = new SoundFile(p,AstroDashUI.fileFolder + "Lava-Sizzle.mp3");
+        coinSound = new SoundFile(p,"Coin-Receive.mp3");
+        enemySound = new SoundFile(p,"Enemy-Damage.mp3");
+        lavaSound = new SoundFile(p,"Lava-Sizzle.mp3");
     }
 
     public void draw(PApplet p){

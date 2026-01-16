@@ -43,5 +43,5 @@ Lava Pits
 250,775,130,20
 350,495,180,10
 250,310,150,10
-Checkpoint
+main.java.Checkpoint
 760,65,40,40

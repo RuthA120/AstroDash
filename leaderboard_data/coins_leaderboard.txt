@@ -1,7 +1,0 @@
-Coins
-ruth,56
-Player4,56
-Ruth,56
-Player2,27
-Player1,26
-Player3,15

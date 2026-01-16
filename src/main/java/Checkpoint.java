@@ -1,3 +1,4 @@
+package main.java;
 import processing.core.*;
 
 public class Checkpoint {
@@ -34,7 +35,7 @@ public class Checkpoint {
     public void setCheckpointHeight(int blockHeight) { this.checkpointHeight = blockHeight; }
 
     public void loadMedia(PApplet p){
-        checkpointImage = p.loadImage(AstroDashUI.fileFolder + "Checkpoint-Star.png");
+        checkpointImage = p.loadImage("Checkpoint-Star.png");
         checkpointImage.resize(40, 40);
     }
 

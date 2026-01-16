@@ -1,3 +1,4 @@
+package main.java;
 import processing.core.*;
 import processing.sound.SoundFile;
 
@@ -53,8 +54,8 @@ public class FinalBoss extends Impediment{
 
     public void loadMedia(PApplet p){
         fireBall.loadMedia(p);
-        finalBossImage = p.loadImage(AstroDashUI.fileFolder + "FinalBoss.png");
-        lavaSound = new SoundFile(p,AstroDashUI.fileFolder + "Lava-Sizzle.mp3");
+        finalBossImage = p.loadImage("FinalBoss.png");
+        lavaSound = new SoundFile(p,"Lava-Sizzle.mp3");
     }
 
     public void runTests(){
@@ -160,7 +161,5 @@ public class FinalBoss extends Impediment{
         return "Final Boss: \n" + "Current Lives: " + life + "\n" + "Current Health: " + healthBar + "\n"
                 + "Coordinates: " + getXLocation() + ", " + getYLocation() + "\n" + fireBall + "\n";
     }
-
-
 
 }

@@ -1,3 +1,5 @@
+package main.java;
+
 import processing.core.*;
 
 public class GameTimer {

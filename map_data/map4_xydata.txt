@@ -54,5 +54,5 @@ Enemies
 410,720
 625,720
 570,530
-Checkpoint
+main.java.Checkpoint
 775,65,30,30
