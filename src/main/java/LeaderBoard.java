@@ -45,31 +45,40 @@ public class LeaderBoard {
         assert topTimes != null;
     }
 
-    public void draw(PApplet p, String type) {
+    public void draw(PApplet p, String type, int baseW, int baseH) {
         int leaderTracker = 1;
         HashMap<String, Integer> displayMap = type.equals("Coins") ? top10Points : top10Times;
 
+
         for (HashMap.Entry<String, Integer> entry : displayMap.entrySet()) {
-            p.fill(0);
-            p.textSize(30);
+                p.fill(0);
+                p.textSize(30);
 
-            boolean longName = entry.getKey().length() >= 8;
-            String text = longName
-                    ? entry.getKey() + ", " + entry.getValue() + (type.equals("Coins") ? " coins " : " s ")
-                    : entry.getKey() + ", " + entry.getValue() + (type.equals("Coins") ? " coins " : " s ");
+                boolean longName = entry.getKey().length() >= 8;
+                String text = longName
+                        ? entry.getKey() + ", " + entry.getValue() + (type.equals("Coins") ? " coins " : " s ")
+                        : entry.getKey() + ", " + entry.getValue() + (type.equals("Coins") ? " coins " : " s ");
 
-            int x, y;
-            if (leaderTracker <= 5) {
-                x = 113;
-                y = 120 + (leaderTracker * 120);
-            } else {
-                x = 503;
-                y = -483 + (leaderTracker * 120);
-            }
+                int colSpacing = 400;
+                int rowSpacing = 120;
 
-            p.text(text, x, y);
-            leaderTracker++;
+                int baseX = xLocation + 110;
+                int baseY = yLocation + 240;
+
+                int col = (leaderTracker - 1) / 5;
+                int row = (leaderTracker - 1) % 5;
+
+                int x = baseX + col * colSpacing;
+                int y = baseY + row * rowSpacing;
+
+                p.text(text, x, y);
+
+                p.text(text, x, y);
+                leaderTracker++;
         }
+
+
+
     }
 
 

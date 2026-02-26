@@ -72,7 +72,7 @@ public class Game {
         leaderBoardImages = new ArrayList<>(2);
     }
 
-    public Game(int mapCount){
+    public Game(int mapCount, int baseW, int baseH){
         this.mapCount = mapCount;
         currentMap = 1;
         timer = new GameTimer();
@@ -137,7 +137,7 @@ public class Game {
     }
 
 
-    public void draw(PApplet p, PFont myFont)
+    public void draw(PApplet p, PFont myFont, int baseW, int baseH)
     {
         if(!gameStarted && !sameUser){
             backgroundImage = screenImages.get(0);
@@ -156,12 +156,12 @@ public class Game {
         else if(showCoinsLeaderBoard){
             backgroundImage = leaderBoardImages.get(0);
             p.background(backgroundImage);
-            leaderBoard.draw(p, "Coins");
+            leaderBoard.draw(p, "Coins", baseW, baseH);
         }
         else if(showTimesLeaderBoard){
             backgroundImage = leaderBoardImages.get(1);
             p.background(backgroundImage);
-            leaderBoard.draw(p, "Time");
+            leaderBoard.draw(p, "Time", baseW, baseH);
         }
 
         else if(showInstructions1){
@@ -209,12 +209,17 @@ public class Game {
                 p.fill(255);
                 String str5 = " " + leaderBoard.getPointsLeaderboardPositon(player.getName());
                 p.textSize(50);
-                p.text(str5, 535, 360);
+
+                float centerX = baseW * 0.66f;
+                float pointsY = baseH * 0.45f;
+                float timeY   = baseH * 0.59f;
+
+                p.text(str5, centerX, pointsY);
 
                 p.fill(255);
                 String str6 = " " + leaderBoard.getTimesLeaderboardPositon(player.getName());
                 p.textSize(50);
-                p.text(str6, 535, 465);
+                p.text(str6, centerX, timeY);
 
                 if (!winSoundPlayed) {
                     soundGameWon.play();
